@@ -202,7 +202,7 @@ with tab4:
     st.button(f"{'👍 Yes' if prediction[0] == 1 else '👎 No'}")
 
 with tab5:
-    st.image("https://photos.app.goo.gl/FcCJeqUS6K1HsfFn6")
+    # st.image("https://photos.app.goo.gl/FcCJeqUS6K1HsfFn6")
     st.markdown("---")
     st.write("""
         Hello everyone! I'm Vishal, a data science enthusiast who loves to play with data and uncover hidden patterns and insights. I enjoy using programming languages such as Python and R to analyze data and create interactive dashboards and web apps. I am always curious to learn new skills and techniques to keep up with the fast-paced and dynamic field of data science.
