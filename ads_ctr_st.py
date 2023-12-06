@@ -16,7 +16,6 @@ import streamlit as st
 pio.templates.default = "plotly_white"
 
 # Load the dataset
-# data = pd.read_csv("https://raw.githubusercontent.com/vishalkumarhere/cmse_final/main/ad_10000records.csv")
 data = pd.read_csv("ad_10000records.csv")
 
 # Map binary target variable to Yes/No for better visualization
@@ -73,12 +72,11 @@ accuracy = accuracy_score(y_test, y_pred)
 cm = confusion_matrix(y_test, y_pred)
 
 # Create three tabs with different names
-tab1, tab2, tab3, tab4 = st.tabs(["Intro", "Visualization", "Owl", "Input"])
+tab1, tab2, tab3, tab4, tab5 = st.tabs(["Introduction", "Visualization", "Owl", "Predictor", "About Me"])
 
 # Add elements to each tab using with notation
 with tab1:
-    st.header("Introduction")
-    st.image("https://static.streamlit.io/examples/cat.jpg", width=200)
+    st.image("https://s3.amazonaws.com/newblog.psd2html.com/wp-content/uploads/2021/01/12115609/what-is-banner-ctr.png")
 
     st.markdown('---')
     # Dataset display
@@ -104,15 +102,14 @@ with tab1:
         - With the youngest being 19 and eldest being 60
     - Area Income:
         - The mean income per area is $53,840
-        - With minimum being $13,996 and maximum being $79,332
+        - With minimum being \$13,996 and maximum being \$79,332
     - Daily Internet Usage:
         - On average, each user spends about 177 mins browsing the internet
         - The least time being 105 mins and highest being 270 mins
     """)
 
 with tab2:
-    st.header("Now let's analyze some important features")
-    st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
+    st.image("https://www.grazitti.com/assets/2017/01/main.png")
     st.markdown("---")
     
     ## Visualization Section
@@ -124,7 +121,7 @@ with tab2:
     st.pyplot(fig_gender)
     st.write("From the above graph, we can see that Females click more on ads than Males")
     st.markdown("---")
- 
+
     st.subheader("Time Spent on Site vs. Click Through Rate")
     st.plotly_chart(fig_time_spent)
     st.write("From the above graph, we can see that the users who spend more time on the website click more on ads")
@@ -145,8 +142,7 @@ with tab2:
     st.write("There’s not much difference, but people from high-income areas click less on ads.")
 
 with tab3:
-    st.header("Model Building")
-    st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
+    st.image("https://cdn3.vectorstock.com/i/1000x1000/54/97/machine-learning-artificial-intelligence-concept-vector-20805497.jpg")
     st.markdown("---")
     
     ## Model Building Section
@@ -166,7 +162,7 @@ with tab3:
     # st.markdown('---')
 
     # st.subheader("Confusion Matrix")
-  
+
     # # Create a figure object
     # fig = plt.figure()
 
@@ -182,7 +178,7 @@ with tab3:
     # st.pyplot(fig)
 
 with tab4:
-    st.header("User Input")
+    st.image("https://cdn.dribbble.com/users/579758/screenshots/5546963/18-11-25-s.jpg")
 
     ## User Input Section
     st.title("Ads Click Through Rate Prediction")
@@ -205,3 +201,15 @@ with tab4:
     st.write("Will the user click on ad?")
     st.button(f"{'👍 Yes' if prediction[0] == 1 else '👎 No'}")
 
+with tab5:
+    st.image("https://photos.app.goo.gl/FcCJeqUS6K1HsfFn6")
+    st.markdown("---")
+    st.write("""
+        Hello everyone! I'm Vishal, a data science enthusiast who loves to play with data and uncover hidden patterns and insights. I enjoy using programming languages such as Python and R to analyze data and create interactive dashboards and web apps. I am always curious to learn new skills and techniques to keep up with the fast-paced and dynamic field of data science.
+
+        Apart from data analysis, I have a passion for sports and gaming. One of my favorite hobbies is playing football with my friends. I love the thrill and excitement of the game, as well as the teamwork and camaraderie that it fosters. Playing football also helps me stay fit and healthy, which is important for me. Another way I like to keep myself fit is by going to the gym regularly. I find working out to be a great way to relieve stress and improve my mood. It also challenges me to push myself beyond my limits and achieve my fitness goals.
+
+        When I'm not playing football or working out, I like to indulge in some gaming. Gaming is not just a fun activity for me; it's also a way to stimulate my mind and imagination. I enjoy playing different genres of games, from action-adventure to strategy to simulation. Gaming allows me to explore different worlds and scenarios, and also to interact with other players and make new friends.
+
+        I invite you to check out my web app and join me on this amazing journey of data discovery and analytics.
+    """)
