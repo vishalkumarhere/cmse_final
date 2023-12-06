@@ -71,12 +71,13 @@ accuracy = accuracy_score(y_test, y_pred)
 ## Confusion Matrix
 cm = confusion_matrix(y_test, y_pred)
 
-st.title("Ads Click Through Rate Predictor")
 # Create three tabs with different names
 tab1, tab2, tab3, tab4, tab5 = st.tabs(["Introduction", "Visualization", "Model Building", "Predictor", "About Me"])
 
 # Add elements to each tab using with notation
 with tab1:
+    st.title("Ads Click Through Rate Predictor")
+
     st.image("https://s3.amazonaws.com/newblog.psd2html.com/wp-content/uploads/2021/01/12115609/what-is-banner-ctr.png")
 
     st.markdown('---')
