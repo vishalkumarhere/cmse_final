@@ -16,7 +16,8 @@ import streamlit as st
 pio.templates.default = "plotly_white"
 
 # Load the dataset
-data = pd.read_csv("https://github.com/vishalkumarhere/cmse_final/blob/main/ad_10000records.csv")
+# data = pd.read_csv("https://raw.githubusercontent.com/vishalkumarhere/cmse_final/main/ad_10000records.csv")
+data = pd.read_csv("ad_10000records.csv")
 
 # Map binary target variable to Yes/No for better visualization
 data["Clicked on Ad"] = data["Clicked on Ad"].map({0: "No", 1: "Yes"})
