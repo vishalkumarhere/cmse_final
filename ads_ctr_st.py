@@ -60,7 +60,7 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_
 
 ## Build a RandomForestClassifier model
 model = RandomForestClassifier()
-model.fit(x_train, y_train)
+model.fit(x,y)
 
 ## Predictions on the test set
 y_pred = model.predict(x_test)
@@ -72,7 +72,7 @@ accuracy = accuracy_score(y_test, y_pred)
 cm = confusion_matrix(y_test, y_pred)
 
 # Create three tabs with different names
-tab1, tab2, tab3, tab4, tab5 = st.tabs(["Introduction", "Visualization", "Owl", "Predictor", "About Me"])
+tab1, tab2, tab3, tab4, tab5 = st.tabs(["Introduction", "Visualization", "Model Building", "Predictor", "About Me"])
 
 # Add elements to each tab using with notation
 with tab1:
