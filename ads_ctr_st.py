@@ -71,6 +71,7 @@ accuracy = accuracy_score(y_test, y_pred)
 ## Confusion Matrix
 cm = confusion_matrix(y_test, y_pred)
 
+st.title("Ads Click Through Rate Predictor")
 # Create three tabs with different names
 tab1, tab2, tab3, tab4, tab5 = st.tabs(["Introduction", "Visualization", "Model Building", "Predictor", "About Me"])
 
