@@ -157,25 +157,25 @@ with tab3:
     """)
     st.markdown("---")
 
-    # st.subheader("Model Evaluation")
-    # st.write(f"Accuracy: {accuracy:.2%}")
-    # st.markdown('---')
+    st.subheader("Model Evaluation")
+    st.write(f"Accuracy: {accuracy:.2%}")
+    st.markdown('---')
 
-    # st.subheader("Confusion Matrix")
+    st.subheader("Confusion Matrix")
 
-    # # Create a figure object
-    # fig = plt.figure()
+    # Create a figure object
+    fig = plt.figure()
 
-    # # Plot the heatmap on the figure
-    # sns.heatmap(cm, fmt='g', cbar=False, annot=True)
+    # Plot the heatmap on the figure
+    sns.heatmap(cm, fmt='g', cbar=False, annot=True)
 
-    # # Set the labels and title on the figure
-    # plt.ylabel("Actual")
-    # plt.xlabel("Predicted")
-    # plt.title("Confusion Matrix")
+    # Set the labels and title on the figure
+    plt.ylabel("Actual")
+    plt.xlabel("Predicted")
+    plt.title("Confusion Matrix")
 
-    # # Display the figure using st.pyplot
-    # st.pyplot(fig)
+    # Display the figure using st.pyplot
+    st.pyplot(fig)
 
 with tab4:
     st.image("https://cdn.dribbble.com/users/579758/screenshots/5546963/18-11-25-s.jpg")
