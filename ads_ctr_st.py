@@ -23,7 +23,7 @@ data = pd.read_csv("ad_10000records.csv")
 
 # Heatmap
 # data["Gender"] = data["Gender"].map({"Male": 1, "Female": 0})
-heatmap = sns.heatmap(data.corr(), cmap="coolwarm", annot=True)
+# heatmap = sns.heatmap(data.corr(), cmap="coolwarm", annot=True)
     
 # Map binary target variable to Yes/No for better visualization
 data["Clicked on Ad"] = data["Clicked on Ad"].map({0: "No", 1: "Yes"})
@@ -132,10 +132,10 @@ with tab2:
         st.write("There’s not much difference, but people from high-income areas click less on ads.")
         st.markdown("---")
     
-    # Heatmap
-    st.pyplot(heatmap.figure)
-    st.write("This heatmap provides a visual represtation of the correlations between the features")
-    st.markdown("---")
+    # # Heatmap
+    # st.pyplot(heatmap.figure)
+    # st.write("This heatmap provides a visual represtation of the correlations between the features")
+    # st.markdown("---")
 
 with tab3:
     st.image("ml.jpg")
