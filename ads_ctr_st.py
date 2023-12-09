@@ -21,9 +21,9 @@ data = pd.read_csv("ad_10000records.csv")
 
 # Visualizations Section
 
-## Heatmap
-# data["Gender"] = data["Gender"].map({"Male": 1, "Female": 0})
-# heatmap = sns.heatmap(data.corr(), vmin=-1, vmax=1, cmap="coolwarm", annot=True)
+# Heatmap
+data["Gender"] = data["Gender"].map({"Male": 1, "Female": 0})
+heatmap = sns.heatmap(data.corr(), vmin=-1, vmax=1, cmap="coolwarm", annot=True)
     
 # Map binary target variable to Yes/No for better visualization
 data["Clicked on Ad"] = data["Clicked on Ad"].map({0: "No", 1: "Yes"})
